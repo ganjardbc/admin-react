@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "ec0716ae8aa1ba781a1a6bcbce833f6c",
-    "url": "/admin-react/static/media/fa-brands-400.ec0716ae.eot"
+    "revision": "b69de69a4ff8ca0abe96ec0b0c180c5b",
+    "url": "/admin-react/static/media/fa-brands-400.b69de69a.ttf"
   },
   {
-    "revision": "708b4552a428db576439",
+    "revision": "a4d8f239b3574094b354",
     "url": "/admin-react/static/css/main.3775229d.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/admin-react/static/js/runtime~main.b1e3a5f6.js"
   },
   {
-    "revision": "250f92d266b6cb528bba",
-    "url": "/admin-react/static/js/2.a5ae218f.chunk.js"
+    "revision": "5b0cafe37d996b2c5843",
+    "url": "/admin-react/static/js/2.87e40d7a.chunk.js"
   },
   {
     "revision": "bdadb6ce95c5a2e7b673940721450d3c",
@@ -48,12 +48,12 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-solid-900.bcb927a7.woff"
   },
   {
-    "revision": "708b4552a428db576439",
-    "url": "/admin-react/static/js/main.d1abd9b3.chunk.js"
+    "revision": "a4d8f239b3574094b354",
+    "url": "/admin-react/static/js/main.79cf495d.chunk.js"
   },
   {
-    "revision": "b69de69a4ff8ca0abe96ec0b0c180c5b",
-    "url": "/admin-react/static/media/fa-brands-400.b69de69a.ttf"
+    "revision": "ec0716ae8aa1ba781a1a6bcbce833f6c",
+    "url": "/admin-react/static/media/fa-brands-400.ec0716ae.eot"
   },
   {
     "revision": "6993975cbae77892abc356874c645730",
@@ -76,12 +76,12 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-solid-900.2a803d18.svg"
   },
   {
-    "revision": "fb98ed1700e8dfaf0764c11fc36a0a05",
-    "url": "/admin-react/static/media/NunitoSans-Regular.fb98ed17.ttf"
-  },
-  {
     "revision": "e6a9e16cac802736f3c92c47d94a52de",
     "url": "/admin-react/static/media/NunitoSans-ExtraBold.e6a9e16c.ttf"
+  },
+  {
+    "revision": "fb98ed1700e8dfaf0764c11fc36a0a05",
+    "url": "/admin-react/static/media/NunitoSans-Regular.fb98ed17.ttf"
   },
   {
     "revision": "51066f4d1d33630cd761e8cd0168d7b0",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/Quicksand-Regular.f46f486e.ttf"
   },
   {
-    "revision": "094335224254f258d998bbf528ea7ad9",
+    "revision": "bf5b5ff22cb0815b9fa8d7c79d581fee",
     "url": "/admin-react/index.html"
   }
 ];
