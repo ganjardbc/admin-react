@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route, NavLink, HashRouter } from "react-router-dom"
 
 // components
 // import Side from './layouts/Side'
@@ -27,7 +27,7 @@ class App extends Component {
 
     for (let i = 0; i < 10; i++) {
       dt.push(
-        <Link to={'/contents/'+i}>
+        <NavLink to={'/contents/'+i}>
           <li className="content">
               <div className="list">
                 <div className="icn">
@@ -38,7 +38,7 @@ class App extends Component {
                 </div>
               </div>
           </li>
-        </Link>
+        </NavLink>
       )
     }
 
@@ -57,7 +57,7 @@ class App extends Component {
     
 
     return (
-      <Router>
+      <HashRouter history={ Router.browserHistory }>
         <div className="app">
 
           {/* Side */}
@@ -89,7 +89,7 @@ class App extends Component {
 
                 <ul className="app-menu">
 
-                  <Link to="/">
+                  <NavLink to="/">
                     <li className="content">
                       <div className="list">
                         <div className="icn">
@@ -100,9 +100,9 @@ class App extends Component {
                         </div>
                       </div>
                     </li>
-                  </Link>
+                  </NavLink>
 
-                  <Link to="/apps">
+                  <NavLink to="/apps">
                     <li className="content">
                       <div className="list">
                         <div className="icn">
@@ -116,9 +116,9 @@ class App extends Component {
                         </div>
                       </div>
                     </li>
-                  </Link>
+                  </NavLink>
 
-                  <Link to="/pages">
+                  <NavLink to="/pages">
                     <li className="content">
                       <div className="list">
                         <div className="icn">
@@ -132,7 +132,7 @@ class App extends Component {
                         </div>
                       </div>
                     </li>
-                  </Link>
+                  </NavLink>
 
                 </ul>
 
@@ -232,7 +232,7 @@ class App extends Component {
           
 
         </div>
-      </Router>
+      </HashRouter>
 
     )
   }
