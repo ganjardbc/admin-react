@@ -885,13 +885,14 @@
   width: 100%;
   height: 45px;
   overflow: hidden;
-  background-color: #f5f5f5;
   display: inline-block;
   border-radius: 5px;
   display: grid;
   display: -ms-grid;
   grid-template-columns: 1fr 50px;
   -ms-grid-columns: 1fr 50px; }
+  .input-group.input-grey {
+    background-color: #f5f5f5; }
   .input-group.input-blue {
     background-color: rgba(57, 66, 99, 0.1); }
   .input-group.input-purple {
@@ -1551,7 +1552,39 @@
     color: rgba(0, 0, 0, 0.54);
     line-height: 1.2; }
 
-table {
+.table-head {
+  position: relative;
+  width: calc(100% - 30px);
+  padding: 15px;
+  color: rgba(0, 0, 0, 0.84);
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr; }
+  .table-head .float-right {
+    float: right;
+    text-align: right; }
+  .table-head .form-control {
+    border: 1px #f3f3f3 solid;
+    height: 45px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #fff; }
+
+.table-foot {
+  position: relative;
+  width: calc(100% - 30px);
+  padding: 15px;
+  color: rgba(0, 0, 0, 0.84);
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr; }
+  .table-foot .pull-right {
+    float: right;
+    text-align: right; }
+
+.table {
   position: relative;
   width: calc(100% - 30px);
   padding: 15px;
@@ -1561,22 +1594,44 @@ table {
   box-shadow: 0 0 10px 0 rgba(154, 161, 171, 0.15);
   margin: 15px;
   border-collapse: collapse; }
-  table th {
-    height: 52px;
-    font-size: 11pt; }
-  table td {
+  .table thead {
+    background-color: #394263; }
+    .table thead tr th {
+      padding: 15px;
+      font-size: 11pt;
+      color: #fff;
+      text-align: left; }
+      .table thead tr th .sortable {
+        color: #fff; }
+  .table td {
     padding: 15px;
     font-size: 11pt;
-    vertical-align: middle;
-    text-align: center; }
-  table tr {
+    vertical-align: middle; }
+  .table tr {
     color: rgba(0, 0, 0, 0.54); }
-    table tr:hover {
-      background-color: #f9f9f9; }
-  table tr:nth-child(even) {
+  .table tr:nth-child(even) {
     background-color: #f5f5f5; }
-  table tfoot {
+  .table tfoot {
     padding: 10px 0; }
+
+.pagination .page-item {
+  list-style: none;
+  display: inline-block;
+  font-size: 11pt; }
+  .pagination .page-item.disabled .page-link {
+    cursor: not-allowed;
+    color: rgba(0, 0, 0, 0.84);
+    background-color: #f5f5f5; }
+  .pagination .page-item .page-link {
+    padding: 10px;
+    height: 45px;
+    border: 1px #f3f3f3 solid;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: rgba(0, 0, 0, 0.54);
+    background-color: #fff; }
+    .pagination .page-item .page-link:hover {
+      background-color: #f5f5f5; }
 
 .link {
   cursor: default; }

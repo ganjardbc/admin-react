@@ -69,7 +69,39 @@
     }
 }
 
-table {
+
+.table-head {
+    position: relative;
+    width: calc(100% - 30px);
+    padding: 15px;
+    color: $txt-84-color;
+    @include grid_2x(1fr, 1fr);
+    .float-right {
+        float: right;
+        text-align: right;
+    }
+    .form-control {
+        border: $border;
+        height: 45px;
+        padding: 0 10px;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+}
+
+.table-foot {
+    position: relative;
+    width: calc(100% - 30px);
+    padding: 15px;
+    color: $txt-84-color;
+    @include grid_2x(1fr, 1fr);
+    .pull-right {
+        float: right;
+        text-align: right;
+    }
+}
+
+.table {
     position: relative;
     width: calc(100% - 30px);
     padding: 15px;
@@ -79,22 +111,31 @@ table {
     box-shadow: 0 0 10px 0 rgba(154,161,171,.15);
     margin: 15px;
     border-collapse: collapse;
-    th {
-        height: 52px;
-        font-size: 11pt;
+    thead {
+        background-color: $blue;
+        tr {
+            th {
+                padding: 15px;
+                font-size: 11pt;
+                color: #fff;
+                text-align: left;
+                .sortable {
+                    color: #fff;
+                }
+            }
+        }
     }
     td {
         padding: 15px;
         font-size: 11pt;
         vertical-align: middle;
-        text-align: center;
     }
     tr {
         // border-bottom: $border;
         color: $txt-54-color;
-        &:hover {
-            background-color: #f9f9f9;
-        }
+        // &:hover {
+        //     background-color: #f9f9f9;
+        // }
     }
     tr:nth-child(even) {
         background-color: #f5f5f5;
@@ -103,6 +144,33 @@ table {
         padding: 10px 0;
     }
 
+}
+
+.pagination {
+    .page-item {
+        list-style: none;
+        display: inline-block;
+        font-size: 11pt;
+        &.disabled {
+            .page-link {
+                cursor: not-allowed;
+                color: $txt-84-color;
+                background-color: #f5f5f5;
+            }
+        }
+        .page-link {
+            padding: 10px;
+            height: 45px;
+            border: $border;
+            border-radius: 5px;
+            margin: 0 5px;
+            color: $txt-54-color;
+            background-color: #fff;
+            &:hover {
+                background-color: #f5f5f5;
+            }
+        }
+    }
 }
 
 .link {

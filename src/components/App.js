@@ -28,7 +28,7 @@ class App extends Component {
     for (let i = 0; i < 10; i++) {
       dt.push(
         <NavLink to={'/contents/'+i}>
-          <li className="content">
+          <li className="content" onClick={ this.opSlide }>
               <div className="list">
                 <div className="icn">
                   <i className="fa fa-lg fa-th"></i>
@@ -61,7 +61,7 @@ class App extends Component {
         <div className="app">
 
           {/* Side */}
-          <div className={ this.state.slideClass } onClick={ this.opSlide }>
+          <div className={ this.state.slideClass }>
             <div className="slide-content background-blue change-scrollbar">
 
               <div className="padding-top-20px">
@@ -90,7 +90,7 @@ class App extends Component {
                 <ul className="app-menu">
 
                   <NavLink to="/">
-                    <li className="content">
+                    <li className="content" onClick={ this.opSlide }>
                       <div className="list">
                         <div className="icn">
                           <i className="fa fa-lg fa-tachometer-alt"></i>
@@ -103,7 +103,7 @@ class App extends Component {
                   </NavLink>
 
                   <NavLink to="/apps">
-                    <li className="content">
+                    <li className="content" onClick={ this.opSlide }>
                       <div className="list">
                         <div className="icn">
                           <i className="fa fa-lg fa-th"></i>
@@ -119,7 +119,7 @@ class App extends Component {
                   </NavLink>
 
                   <NavLink to="/pages">
-                    <li className="content">
+                    <li className="content" onClick={ this.opSlide }>
                       <div className="list">
                         <div className="icn">
                           <i className="fa fa-lg fa-file"></i>

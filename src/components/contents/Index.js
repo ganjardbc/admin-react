@@ -1,127 +1,147 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import ReactDatatable from '@ashvin27/react-datatable';
 
-class Contents extends Component {
+
+class Pages extends Component {
+
+  constructor(props) {
+    super(props)
+    this.columns = [
+      {
+        key: "name",
+        text: "Name",
+        className: "name",
+        align: "left",
+        sortable: true,
+      },
+      {
+        key: "address",
+        text: "Address",
+        className: "address",
+        align: "left",
+        sortable: true
+      },
+      {
+        key: "postcode",
+        text: "Postcode",
+        className: "postcode",
+        sortable: true
+      },
+      {
+        key: "rating",
+        text: "Rating",
+        className: "rating",
+        align: "left",
+        sortable: true
+      },
+      {
+        key: "type_of_food",
+        text: "Type of Food",
+        className: "type_of_food",
+        sortable: true,
+        align: "left"
+      },
+      {
+        key: "action",
+        text: "Action",
+        className: "action",
+        width: 130,
+        align: "center",
+        sortable: false,
+        cell: record => { 
+            return (
+                <Fragment>
+                    <button
+                        className="btn btn-green btn-circle" 
+                        onClick={() => this.editRecord(record)}
+                        style={{marginRight: '5px'}}>
+                        <i className="fa fa-edit"></i>
+                    </button>
+                    <button 
+                        className="btn btn-red btn-circle" 
+                        onClick={() => this.deleteRecord(record)}>
+                        <i className="fa fa-trash"></i>
+                    </button>
+                </Fragment>
+            );
+        }
+    }
+    ]
+    this.config = {
+      page_size: 10,
+      length_menu: [ 10, 20, 50 ],
+      button: {
+        search: true,
+        print: true
+      }
+    }
+    this.state = {
+      records: [
+        {
+          "id": "55f14312c7447c3da7051b26",
+          "address": "228 City Road",
+          "name": ".CN Chinese",
+          "postcode": "3JH",
+          "rating": 5,
+          "type_of_food": "Chinese"
+        },
+        {
+          "id": "55f14312c7447c3da7051b27",
+          "address": "376 Rayleigh Road",
+          "name": "@ Thai",
+          "postcode": "5PT",
+          "rating": 5.5,
+          "type_of_food": "Thai"
+        },
+        {
+          "id": "55f14312c7447c3da7051b28",
+          "address": "30 Greyhound Road Hammersmith",
+          "name": "@ Thai Restaurant",
+          "postcode": "8NX",
+          "rating": 4.5,
+          "type_of_food": "Thai"
+        },
+        {
+          "id": "55f14312c7447c3da7051b29",
+          "address": "30 Greyhound Road Hammersmith",
+          "name": "@ Thai Restaurant",
+          "postcode": "8NX",
+          "rating": 4.5,
+          "type_of_food": "Thai"
+        }
+      ]
+    }
+  }
+
+  editRecord(record) {
+    console.log("Edit Record", record);
+  }
+
+  deleteRecord(record) {
+    console.log("Delete Record", record);
+  }
+
   render() {
     return (
       <div className="main-content">
+
+        <div className="padding-15px">
+          <div className="txt-site txt-18 txt-bold txt-main">
+            Component Pages
+          </div>
+        </div>
         
-        <div className="display-flex padding-15px">
-          <div className="grid grid-2x grid-mobile-none">
-              <div className="col-1">
-                  <div className="txt-site txt-18 txt-bold txt-main margin-top-5px margin-bottom-5px">
-                    Component Pages
-                  </div>
-              </div>
-              <div className="col-2 content-right">
-                  <form action="#" className="width width-full">
-                      <div className="display-flex background-dark-grey border-radius">
-                          <select 
-                            name="search" 
-                            className="slc slc-primary"
-                            required>
-                              <option value="val">Urutkan</option>
-                              <option value="val1">Val 1</option>
-                              <option value="val1">Val 1</option>
-                              <option value="val1">Val 1</option>
-                          </select>
-
-                          <input 
-                            type="text" 
-                            className="txt txt-main-color txt-primary-color" 
-                            placeholder="Masukan kata kunci"
-                            required></input>
-                                        
-                          <button 
-                            className="btn btn-blue btn-no-radius"
-                            type="submit">
-                            Cari
-                          </button>
-                      </div>
-                  </form>
-              </div>
-          </div>
-        </div>
-
-        <div className="display-flex">
-          <table>
-            <thead className="background-blue">
-              <th width="80">No</th>
-              <th>Content 1</th>
-              <th className="app-desktop">Content 2</th>
-              <th className="app-desktop">Content 3</th>
-              <th className="app-desktop">Content 4</th>
-              <th width="200">Actions</th>
-            </thead>
-            <tbody>
-              { this.createTableContents() }
-            </tbody>
-          </table>
-        </div>
-
-        <div className="display-flex padding-bottom-20px">
-          <div className="width width-all padding-15px">
-            <div className="grid grid-2x">
-              <div className="col-1">
-                <ul className="link link-pos">
-                  <li>
-                    <a href="/#">
-                      <i className="fa fa-lg fa-angle-left"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <div className="val">
-                      5 / 15
-                    </div>
-                  </li>
-                  <li>
-                    <a href="/#">
-                      <i className="fa fa-lg fa-angle-right"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-2 content-right">
-                <div className="txt-site txt-main txt-11 post-center">
-                  [221 - 223 / 223]
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <ReactDatatable
+          config={this.config}
+          records={this.state.records}
+          columns={this.columns}
+        ></ReactDatatable>
 
       </div>
     )
   }
 
-  createTableContents = () => {
-    let dt = []
-
-    for (let i = 0; i < 10; i++) {
-      dt.push(
-        <tr>
-          <td>
-            <strong>{i + 1 }</strong>
-          </td>
-          <td>1</td>
-          <td className="app-desktop">2</td>
-          <td className="app-desktop">3</td>
-          <td className="app-desktop">4</td>
-          <td>
-            <button className="btn btn-green btn-small icn">
-              <i className="fa fa-lw fa-pencil-alt"></i>
-            </button>
-            <button className="btn btn-red btn-small icn">
-              <i className="fa fa-lw fa-trash-alt"></i>
-            </button>
-          </td>
-        </tr>
-      )
-    }
-
-    return dt
-  }
 
 }
 
-export default Contents
+export default Pages
