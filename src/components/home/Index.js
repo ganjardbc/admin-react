@@ -43,14 +43,14 @@ class Home extends Component {
 
           <div className="column-2 content-right display-flex">
             <form action="#" style={ {width: '100%'} }>
-                <div className="input-group">
+                <div className="input-group input-border">
                     <input 
                       type="date" 
                       className="txt txt-main-color txt-trans-color" 
                       placeholder="Date"
                       required></input>
                     <button 
-                      className="btn btn-no-radius btn-blue icn"
+                      className="btn btn-no-radius btn-primary icn"
                       type="submit">
                       <i className="far fa-lg fa-calendar"></i>
                     </button>
@@ -58,13 +58,13 @@ class Home extends Component {
             </form>
 
             <div className="margin-left-5px margin-right-5px">
-                <button className="btn btn-blue btn-qube icn">
+                <button className="btn btn-primary btn-qube icn">
                   <i className="fa fa-lg fa-print"></i>
                 </button>
             </div>
 
             <div>
-                <button className="btn btn-blue btn-qube icn" >
+                <button className="btn btn-primary btn-qube icn" >
                   <i className="fa fa-lg fa-ellipsis-h"></i>
                 </button>
             </div>

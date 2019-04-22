@@ -22,7 +22,7 @@ class Apps extends Component {
           </div>
         </div>
 
-        <div className="txt-site txt-12 txt-primary txt-bold margin-left-15px">
+        <div className="txt-site txt-12 txt-main margin-left-15px">
           Content Apps 1
         </div>
 
@@ -31,7 +31,7 @@ class Apps extends Component {
           { this.cardPercentage(2) }
         </div>
 
-        <div className="txt-site txt-12 txt-primary txt-bold margin-left-15px margin-top-15px">
+        <div className="txt-site txt-12 txt-main margin-left-15px margin-top-15px">
           Content Apps 2
         </div>
 

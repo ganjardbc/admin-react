@@ -174,7 +174,7 @@ class App extends Component {
                   </button>
 
                   <form action="#" className="app-desktop">
-                    <div className="input-group">
+                    <div className="input-group input-border">
                       <input 
                         type="text" 
                         className="txt txt-main-color txt-trans-color" 
