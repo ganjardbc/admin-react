@@ -1,19 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "ec0716ae8aa1ba781a1a6bcbce833f6c",
-    "url": "/admin-react/static/media/fa-brands-400.ec0716ae.eot"
+    "revision": "bcb927a742a8370b76642fd1a9a749c0",
+    "url": "/admin-react/static/media/fa-solid-900.bcb927a7.woff"
   },
   {
-    "revision": "a11ae8f5700cf1919426",
-    "url": "/admin-react/static/css/main.3775229d.chunk.css"
+    "revision": "a8f7be443ba485bf3eab",
+    "url": "/admin-react/static/css/main.411f41e3.chunk.css"
   },
   {
     "revision": "c6098be39428dead7c24",
     "url": "/admin-react/static/js/runtime~main.b1e3a5f6.js"
   },
   {
-    "revision": "5b0cafe37d996b2c5843",
-    "url": "/admin-react/static/js/2.87e40d7a.chunk.js"
+    "revision": "51066f4d1d33630cd761e8cd0168d7b0",
+    "url": "/admin-react/static/media/NunitoSans-Bold.51066f4d.ttf"
+  },
+  {
+    "revision": "54924eb2bea0062e5758",
+    "url": "/admin-react/static/js/2.9707421a.chunk.js"
   },
   {
     "revision": "bdadb6ce95c5a2e7b673940721450d3c",
@@ -36,20 +40,20 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-brands-400.659c4d58.woff2"
   },
   {
-    "revision": "8b7a9afd7b95f62e6ee8a72930bfb9ed",
-    "url": "/admin-react/static/media/fa-brands-400.8b7a9afd.woff"
-  },
-  {
     "revision": "fb493903265cad425ccdf8e04fc2de61",
     "url": "/admin-react/static/media/fa-solid-900.fb493903.woff2"
   },
   {
-    "revision": "bcb927a742a8370b76642fd1a9a749c0",
-    "url": "/admin-react/static/media/fa-solid-900.bcb927a7.woff"
+    "revision": "8b7a9afd7b95f62e6ee8a72930bfb9ed",
+    "url": "/admin-react/static/media/fa-brands-400.8b7a9afd.woff"
   },
   {
-    "revision": "a11ae8f5700cf1919426",
-    "url": "/admin-react/static/js/main.bfb57fb3.chunk.js"
+    "revision": "a8f7be443ba485bf3eab",
+    "url": "/admin-react/static/js/main.01caa1fa.chunk.js"
+  },
+  {
+    "revision": "ec0716ae8aa1ba781a1a6bcbce833f6c",
+    "url": "/admin-react/static/media/fa-brands-400.ec0716ae.eot"
   },
   {
     "revision": "b69de69a4ff8ca0abe96ec0b0c180c5b",
@@ -76,23 +80,23 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-solid-900.2a803d18.svg"
   },
   {
-    "revision": "fb98ed1700e8dfaf0764c11fc36a0a05",
-    "url": "/admin-react/static/media/NunitoSans-Regular.fb98ed17.ttf"
-  },
-  {
-    "revision": "51066f4d1d33630cd761e8cd0168d7b0",
-    "url": "/admin-react/static/media/NunitoSans-Bold.51066f4d.ttf"
-  },
-  {
     "revision": "e6a9e16cac802736f3c92c47d94a52de",
     "url": "/admin-react/static/media/NunitoSans-ExtraBold.e6a9e16c.ttf"
+  },
+  {
+    "revision": "fb98ed1700e8dfaf0764c11fc36a0a05",
+    "url": "/admin-react/static/media/NunitoSans-Regular.fb98ed17.ttf"
   },
   {
     "revision": "f46f486edefeba66ac4b538dd593d656",
     "url": "/admin-react/static/media/Quicksand-Regular.f46f486e.ttf"
   },
   {
-    "revision": "62fc5f99ba6d3d58610f6161381c8de1",
+    "revision": "54924eb2bea0062e5758",
+    "url": "/admin-react/static/css/2.fde6c66f.chunk.css"
+  },
+  {
+    "revision": "886b6c22b1458eb1d9f6402ab4e39d83",
     "url": "/admin-react/index.html"
   }
 ];
