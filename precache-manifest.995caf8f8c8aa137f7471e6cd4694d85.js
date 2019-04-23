@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-solid-900.bcb927a7.woff"
   },
   {
-    "revision": "a29a789486349c0b678b",
-    "url": "/admin-react/static/css/main.f043863d.chunk.css"
+    "revision": "7f6abc4bb51734dc8a49",
+    "url": "/admin-react/static/css/main.4ba29fcd.chunk.css"
   },
   {
     "revision": "c6098be39428dead7c24",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-solid-900.fb493903.woff2"
   },
   {
-    "revision": "a29a789486349c0b678b",
-    "url": "/admin-react/static/js/main.3eb6e659.chunk.js"
+    "revision": "7f6abc4bb51734dc8a49",
+    "url": "/admin-react/static/js/main.606c5168.chunk.js"
   },
   {
     "revision": "b69de69a4ff8ca0abe96ec0b0c180c5b",
@@ -64,12 +64,12 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-regular-400.6993975c.svg"
   },
   {
-    "revision": "48f54f63d7711d0912a9a10205538fc4",
-    "url": "/admin-react/static/media/fa-solid-900.48f54f63.ttf"
-  },
-  {
     "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
     "url": "/admin-react/static/media/fa-solid-900.f29ad003.eot"
+  },
+  {
+    "revision": "48f54f63d7711d0912a9a10205538fc4",
+    "url": "/admin-react/static/media/fa-solid-900.48f54f63.ttf"
   },
   {
     "revision": "226ea55c3d9b36d4388f444c49b513a5",
@@ -80,6 +80,10 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-solid-900.2a803d18.svg"
   },
   {
+    "revision": "e6a9e16cac802736f3c92c47d94a52de",
+    "url": "/admin-react/static/media/NunitoSans-ExtraBold.e6a9e16c.ttf"
+  },
+  {
     "revision": "51066f4d1d33630cd761e8cd0168d7b0",
     "url": "/admin-react/static/media/NunitoSans-Bold.51066f4d.ttf"
   },
@@ -88,15 +92,11 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/NunitoSans-Regular.fb98ed17.ttf"
   },
   {
-    "revision": "e6a9e16cac802736f3c92c47d94a52de",
-    "url": "/admin-react/static/media/NunitoSans-ExtraBold.e6a9e16c.ttf"
-  },
-  {
     "revision": "54924eb2bea0062e5758",
     "url": "/admin-react/static/css/2.fde6c66f.chunk.css"
   },
   {
-    "revision": "e9ef950a9f8d548b027a46636a8b7026",
+    "revision": "3bbf5656adfa73f2ad85d986b49008c6",
     "url": "/admin-react/index.html"
   }
 ];
