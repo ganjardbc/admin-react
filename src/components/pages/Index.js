@@ -49,31 +49,30 @@ class Pages extends Component {
         align: "center",
         sortable: false,
         cell: record => { 
-            return (
-                <Fragment>
-                    <button
-                        className="btn btn-green btn-circle" 
-                        onClick={() => this.editRecord(record)}
-                        style={{marginRight: '5px'}}>
-                        <i className="fa fa-edit"></i>
-                    </button>
-                    <button 
-                        className="btn btn-red btn-circle" 
-                        onClick={() => this.deleteRecord(record)}>
-                        <i className="fa fa-trash"></i>
-                    </button>
-                </Fragment>
-            );
+          return (
+            <Fragment>
+              <button
+                className="btn btn-green btn-circle" 
+                onClick={() => this.editRecord(record)}
+                style={{marginRight: '5px'}}>
+                <i className="fa fa-edit"></i>
+              </button>
+              <button 
+                className="btn btn-red btn-circle" 
+                onClick={() => this.deleteRecord(record)}>
+                <i className="fa fa-trash"></i>
+              </button>
+            </Fragment>
+          );
         }
     }
     ]
     this.config = {
-      page_size: 10,
-      length_menu: [ 10, 20, 50 ],
-      button: {
-        search: true,
-        print: true
-      }
+      page_size: 5,
+      length_menu: [ 5, 10, 15, 20],
+      sort: {column: 'name', order: 'asc'},
+      show_filter: true,
+      show_length_menu: true,
     }
     this.state = {
       records: [
@@ -94,12 +93,12 @@ class Pages extends Component {
           "type_of_food": "Thai"
         },
         {
-          "id": "55f14312c7447c3da7051b28",
-          "address": "30 Greyhound Road Hammersmith",
-          "name": "@ Thai Restaurant",
-          "postcode": "8NX",
-          "rating": 4.5,
-          "type_of_food": "Thai"
+          "id": "55f14312c7447c3da7051b44",
+          "address": "23 Road",
+          "name": "Xava Restaurant",
+          "postcode": "8HX",
+          "rating": 4.8,
+          "type_of_food": "Kava"
         },
         {
           "id": "55f14312c7447c3da7051b29",
@@ -108,6 +107,30 @@ class Pages extends Component {
           "postcode": "8NX",
           "rating": 4.5,
           "type_of_food": "Thai"
+        },
+        {
+          "id": "55f14312c7447c3da7051b30",
+          "address": "30 Hammersmith",
+          "name": "Garok",
+          "postcode": "8FX",
+          "rating": 4.0,
+          "type_of_food": "Sundaness"
+        },
+        {
+          "id": "55f14312c7447c3da7051b88",
+          "address": "22 Garo Hammersmith",
+          "name": "Yogya",
+          "postcode": "8FH",
+          "rating": 4.4,
+          "type_of_food": "Yogyakarta"
+        },
+        {
+          "id": "55f14312c7447c3da7051b11",
+          "address": "22 Smith Hammer",
+          "name": "Bali",
+          "postcode": "3FH",
+          "rating": 4.6,
+          "type_of_food": "Japan"
         }
       ]
     }
