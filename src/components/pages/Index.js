@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 // import ReactDatatable from '@ashvin27/react-datatable';
+import {createMuiTheme, MuiThemeProvider, withStyles} from '@material-ui/core/styles';
 import MUIDataTable from "mui-datatables";
 
 const columns = ["No", "Name", "Company", "City", "State"]
@@ -17,15 +18,105 @@ const data = [
 
 const options = {
   filterType: 'dropdown',
-  selectableRows: true,
+  selectableRows: false,
   responsive: 'scroll',
   rowsPerPage: 5,
   rowsPerPageOptions: [5, 10, 50],
   print: false,
-  download: false
+  download: false,
+  elevation: 5,
 }
 
+// const styles = {
+//   overrides: {
+//     MUIDataTable: {
+//       root: {
+//         backgroundColor: "#000",
+//       },
+//       paper: {
+//         boxShadow: "none",
+//       }
+//     },
+//     MUIDataTableBodyCell: {
+//       root: {
+//         backgroundColor: "#FFF"
+//       }
+//     }
+//   }
+// }
+
 class Pages extends Component {
+
+  getMuiTheme = () => createMuiTheme({
+    overrides: {
+      MUIDataTable: {
+        root: {
+          backgroundColor: "#394263",
+        },
+        paper: {
+          boxShadow: "0 0 30px 0 rgba(154,161,171,.15)",
+          borderRadius: "10px",
+          overflow: "hidden",
+        },
+      },
+      MUIDataTableToolbar: {
+        root: {
+          backgroundColor: "#394263",
+        },
+        titleText: {
+          color: "#fff"
+        },
+        icon: {
+          color: "#fff"
+        }
+      },
+      MUIDataTableSearch: {
+        searchIcon: {
+          color: "#fff"
+        },
+        searchText: {
+          color: "#fff",
+          MuiInputBase : {
+            formControl: {
+              color: "#fff"
+            },
+            input: {
+              color: "#fff"
+            }
+          }
+        },
+        clearIcon: {
+          color: "#fff"
+        }
+      },
+      MUIDataTableHead: {
+        main: {
+          backgroundColor: "#394263",
+        },
+        root: {
+          backgroundColor: "#394263",
+        }
+      },
+      MUIDataTableHeadRow: {
+        root: {
+          backgroundColor: "#394263",
+        }
+      },
+      MUIDataTableHeadCell: {
+        root: {
+          fontSize: "11pt",
+          fontWeight: "900",
+          color: "#394263",
+        }
+      },
+      MUIDataTableBodyCell: {
+        root: {
+          backgroundColor: "#fff",
+          fontSize: "11pt",
+        }
+      },
+    }
+  });
 
   render() {
     return (
@@ -38,12 +129,14 @@ class Pages extends Component {
         </div>
         
         <div className="padding-15px">
-          <MUIDataTable
-            title={"Employee List"}
-            data={data}
-            columns={columns}
-            options={options}
-          />
+          <MuiThemeProvider theme={this.getMuiTheme()}>
+            <MUIDataTable
+              title={"Employee List"}
+              data={data}
+              columns={columns}
+              options={options}
+            />
+          </MuiThemeProvider>
         </div>
 
       </div>

@@ -1742,7 +1742,7 @@ a {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 100;
+        z-index: 200;
         background-color: rgba(57, 66, 99, 0.54);
         grid-column: 1;
         -ms-grid-column: 1; } }
