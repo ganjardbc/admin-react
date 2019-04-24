@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-solid-900.bcb927a7.woff"
   },
   {
-    "revision": "798854489bc18ad9dd3c",
+    "revision": "b5b5f067109248b3c9db",
     "url": "/admin-react/static/css/main.c4b39c21.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/admin-react/static/js/runtime~main.b1e3a5f6.js"
   },
   {
-    "revision": "e6a9e16cac802736f3c92c47d94a52de",
-    "url": "/admin-react/static/media/NunitoSans-ExtraBold.e6a9e16c.ttf"
+    "revision": "f46f486edefeba66ac4b538dd593d656",
+    "url": "/admin-react/static/media/Quicksand-Regular.f46f486e.ttf"
   },
   {
     "revision": "b3fdc8080961077322c7",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-solid-900.fb493903.woff2"
   },
   {
-    "revision": "798854489bc18ad9dd3c",
-    "url": "/admin-react/static/js/main.d1731b8f.chunk.js"
+    "revision": "b5b5f067109248b3c9db",
+    "url": "/admin-react/static/js/main.d0ba6ea4.chunk.js"
   },
   {
     "revision": "ec0716ae8aa1ba781a1a6bcbce833f6c",
@@ -80,23 +80,23 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-solid-900.2a803d18.svg"
   },
   {
-    "revision": "51066f4d1d33630cd761e8cd0168d7b0",
-    "url": "/admin-react/static/media/NunitoSans-Bold.51066f4d.ttf"
-  },
-  {
-    "revision": "f46f486edefeba66ac4b538dd593d656",
-    "url": "/admin-react/static/media/Quicksand-Regular.f46f486e.ttf"
+    "revision": "e6a9e16cac802736f3c92c47d94a52de",
+    "url": "/admin-react/static/media/NunitoSans-ExtraBold.e6a9e16c.ttf"
   },
   {
     "revision": "fb98ed1700e8dfaf0764c11fc36a0a05",
     "url": "/admin-react/static/media/NunitoSans-Regular.fb98ed17.ttf"
   },
   {
+    "revision": "51066f4d1d33630cd761e8cd0168d7b0",
+    "url": "/admin-react/static/media/NunitoSans-Bold.51066f4d.ttf"
+  },
+  {
     "revision": "b3fdc8080961077322c7",
     "url": "/admin-react/static/css/2.fde6c66f.chunk.css"
   },
   {
-    "revision": "ae99531508cffd1cc895537a0b05b4bb",
+    "revision": "006493e7705ff67d4bf7bf82de952564",
     "url": "/admin-react/index.html"
   }
 ];
