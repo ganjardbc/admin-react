@@ -92,9 +92,7 @@ class Pages extends Component {
       MUIDataTableHead: {
         main: {
           backgroundColor: "#394263",
-        },
-        root: {
-          backgroundColor: "#394263",
+          color: "#fff"
         }
       },
       MUIDataTableHeadRow: {
@@ -107,11 +105,26 @@ class Pages extends Component {
           fontSize: "11pt",
           fontWeight: "900",
           color: "#394263",
+        },
+        fixedHeader: {
+          backgroundColor: "#394263",
+          color: "#e1e1e1"
+        },
+        sortActive: {
+          color: "#fff"
+        },
+        sortAction: {
+          color: "#fff",
+          MuiButtonBase: {
+            color: "#fff",
+            root: {
+              color: "#fff",
+            }
+          }
         }
       },
       MUIDataTableBodyCell: {
         root: {
-          backgroundColor: "#fff",
           fontSize: "11pt",
         }
       },
