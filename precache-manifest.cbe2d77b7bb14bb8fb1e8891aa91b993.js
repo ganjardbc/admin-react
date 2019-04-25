@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-brands-400.ec0716ae.eot"
   },
   {
-    "revision": "fc6971ecff7197910b54",
-    "url": "/admin-react/static/css/main.106c392d.chunk.css"
+    "revision": "4106bef6da6b80a04601",
+    "url": "/admin-react/static/css/main.400e6fb4.chunk.css"
   },
   {
     "revision": "c6098be39428dead7c24",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-solid-900.bcb927a7.woff"
   },
   {
-    "revision": "fc6971ecff7197910b54",
+    "revision": "4106bef6da6b80a04601",
     "url": "/admin-react/static/js/main.a36beeb6.chunk.js"
   },
   {
@@ -60,12 +60,12 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/fa-regular-400.6993975c.svg"
   },
   {
-    "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
-    "url": "/admin-react/static/media/fa-solid-900.f29ad003.eot"
-  },
-  {
     "revision": "48f54f63d7711d0912a9a10205538fc4",
     "url": "/admin-react/static/media/fa-solid-900.48f54f63.ttf"
+  },
+  {
+    "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
+    "url": "/admin-react/static/media/fa-solid-900.f29ad003.eot"
   },
   {
     "revision": "226ea55c3d9b36d4388f444c49b513a5",
@@ -80,6 +80,10 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/NunitoSans-Regular.fb98ed17.ttf"
   },
   {
+    "revision": "51066f4d1d33630cd761e8cd0168d7b0",
+    "url": "/admin-react/static/media/NunitoSans-Bold.51066f4d.ttf"
+  },
+  {
     "revision": "e6a9e16cac802736f3c92c47d94a52de",
     "url": "/admin-react/static/media/NunitoSans-ExtraBold.e6a9e16c.ttf"
   },
@@ -88,11 +92,7 @@ self.__precacheManifest = [
     "url": "/admin-react/static/media/Quicksand-Regular.f46f486e.ttf"
   },
   {
-    "revision": "51066f4d1d33630cd761e8cd0168d7b0",
-    "url": "/admin-react/static/media/NunitoSans-Bold.51066f4d.ttf"
-  },
-  {
-    "revision": "694fbe55270ded8ed31b70a31e1c21a5",
+    "revision": "0d730c5d3e0d374abf9f5f20de99fb5e",
     "url": "/admin-react/index.html"
   }
 ];

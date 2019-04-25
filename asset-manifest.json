@@ -1,5 +1,5 @@
 {
-  "main.css": "/admin-react/static/css/main.106c392d.chunk.css",
+  "main.css": "/admin-react/static/css/main.400e6fb4.chunk.css",
   "main.js": "/admin-react/static/js/main.a36beeb6.chunk.js",
   "main.js.map": "/admin-react/static/js/main.a36beeb6.chunk.js.map",
   "runtime~main.js": "/admin-react/static/js/runtime~main.b1e3a5f6.js",
@@ -7,9 +7,9 @@
   "static/js/2.58cba1b1.chunk.js": "/admin-react/static/js/2.58cba1b1.chunk.js",
   "static/js/2.58cba1b1.chunk.js.map": "/admin-react/static/js/2.58cba1b1.chunk.js.map",
   "index.html": "/admin-react/index.html",
-  "precache-manifest.1af22a004d8039f8e14abb102e02e67e.js": "/admin-react/precache-manifest.1af22a004d8039f8e14abb102e02e67e.js",
+  "precache-manifest.cbe2d77b7bb14bb8fb1e8891aa91b993.js": "/admin-react/precache-manifest.cbe2d77b7bb14bb8fb1e8891aa91b993.js",
   "service-worker.js": "/admin-react/service-worker.js",
-  "static/css/main.106c392d.chunk.css.map": "/admin-react/static/css/main.106c392d.chunk.css.map",
+  "static/css/main.400e6fb4.chunk.css.map": "/admin-react/static/css/main.400e6fb4.chunk.css.map",
   "static/media/app.css": "/admin-react/static/media/Quicksand-Regular.f46f486e.ttf",
   "static/media/all.min.css": "/admin-react/static/media/fa-solid-900.fb493903.woff2"
 }
