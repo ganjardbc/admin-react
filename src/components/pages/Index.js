@@ -1,19 +1,38 @@
 import React, { Component, Fragment } from 'react'
 // import ReactDatatable from '@ashvin27/react-datatable';
 import {createMuiTheme, MuiThemeProvider, withStyles} from '@material-ui/core/styles';
+import IconButton from "@material-ui/core/IconButton";
+import Tooltip from "@material-ui/core/Tooltip";
+import AddIcon from "@material-ui/icons/Add";
 import MUIDataTable from "mui-datatables";
 
-const columns = ["No", "Name", "Company", "City", "State"]
+const columns = ["No", "Name", "Company", "City", "State", {
+  name: "",
+  options: {
+    customBodyRender: () => {
+      return (
+        <div>
+          <button className="btn btn-green btn-small margin-right-5px">
+            <i className="fa fa-lw fa-pencil-alt"></i>
+          </button>
+          <button className="btn btn-red btn-small">
+            <i className="fa fa-lw fa-trash-alt"></i>
+          </button>
+        </div>
+      )
+    }
+  }
+}]
  
 const data = [
- ["1", "Joe James", "Test Corp", "Yonkers", "NY"],
- ["2", "John Walsh", "Test Corp", "Hartford", "CT"],
- ["3", "Bob Herm", "Test Corp", "Tampa", "FL"],
- ["4", "James Houston", "Test Corp", "Dallas", "TX"],
- ["5", "James", "Test Corp", "Dallas", "TX"],
- ["6", "Collany", "Jorn Corp", "Tampa", "FL"],
- ["7", "Joe Herm", "Fisma Corp", "Hartford", "CN"],
- ["8", "Joe Houston", "Fisma Corp", "Dallas", "CN"],
+  ["1", "Joe James", "Test Corp", "Yonkers", "NY"],
+  ["2", "John Walsh", "Test Corp", "Hartford", "CT"],
+  ["3", "Bob Herm", "Test Corp", "Tampa", "FL"],
+  ["4", "James Houston", "Test Corp", "Dallas", "TX"],
+  ["5", "James", "Test Corp", "Dallas", "TX"],
+  ["6", "Collany", "Jorn Corp", "Tampa", "FL"],
+  ["7", "Joe Herm", "Fisma Corp", "Hartford", "CN"],
+  ["8", "Joe Houston", "Fisma Corp", "Dallas", "CN"],
 ]
 
 const options = {
@@ -25,6 +44,17 @@ const options = {
   print: false,
   download: false,
   elevation: 5,
+  customBodyRender: (value, tableMeta, updateValue) => {
+    return (
+      <React.Fragment>
+        <Tooltip title={"custom icon"}>
+          <IconButton className onClick>
+            <AddIcon className />
+          </IconButton>
+        </Tooltip>
+      </React.Fragment>
+    );
+  }
 }
 
 // const styles = {
@@ -107,8 +137,8 @@ class Pages extends Component {
           color: "#394263",
         },
         fixedHeader: {
-          backgroundColor: "#394263",
-          color: "#e1e1e1"
+          backgroundColor: "#f5f5f5",
+          color: "#555"
         },
         sortActive: {
           color: "#fff"
