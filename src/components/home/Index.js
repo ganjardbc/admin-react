@@ -30,6 +30,22 @@ const data = [
 ];
 
 class Home extends Component {
+
+  constructor () {
+    super()
+    this.state = {
+      moreClass: 'app-menu-popup app-menu-popup-hide',
+    }
+  }
+
+  opMore = () => {
+    if (this.state.moreClass === 'app-menu-popup app-menu-popup-hide') {
+      this.setState({moreClass: 'app-menu-popup'})
+    } else {
+      this.setState({moreClass: 'app-menu-popup app-menu-popup-hide'})
+    }
+  }
+
   render() {
     return (
       <div className="main-content">
@@ -64,10 +80,29 @@ class Home extends Component {
             </div>
 
             <div>
-                <button className="btn btn-primary btn-qube icn" >
+                <button 
+                  className="btn btn-primary btn-qube icn"
+                  onClick={this.opMore}>
                   <i className="fa fa-lg fa-ellipsis-h"></i>
                 </button>
             </div>
+
+            <div
+              style={{top: "40px"}} 
+              class={this.state.moreClass}>
+              <ul>
+                <li onClick={this.opMore}>
+                  Opsi 1
+                </li>
+                <li onClick={this.opMore}>
+                  Opsi 2
+                </li>
+                <li onClick={this.opMore}>
+                  Opsi 3
+                </li>
+              </ul>
+            </div>
+
           </div>
 
         </div>
@@ -79,7 +114,7 @@ class Home extends Component {
 
         </div>
 
-        <div className="display-flex-mobile" style={{width: '100%'}}>
+        <div className="display-flex-mobile">
 
           <table className="table">
               <thead className="background-blue">
@@ -95,7 +130,7 @@ class Home extends Component {
               </tbody>
           </table>
 
-          <div className="card">
+          <div className="card" style={{display: "inline-block"}}>
             <div className="padding-15px background-blue">
               Diagram
             </div>

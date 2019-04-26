@@ -42,10 +42,11 @@ a {
 }
 
 // layout
+$size-side: 280px;
 .app {
 	position: relative;
 	width: 100%;
-	@include grid_2x(300px, 1fr);
+	@include grid_2x($size-side, 1fr);
 
 	@media (max-width: $max-width) {
 		@include grid_none();
@@ -77,7 +78,7 @@ a {
 			position: fixed;
 			top: 0;
 			left: 0;
-			width: 300px;
+			width: $size-side;
 			height: 100vh;
 			overflow-y: auto;
 		}
@@ -112,9 +113,9 @@ a {
 	}
 
 	// menu
-	// .app-submenu {
-	// 	display: none;
-	// }
+	.app-submenu {
+		display: none;
+	}
 
 	.app-menu {
 		position: relative;
@@ -180,25 +181,30 @@ a {
 
 	.app-panel {
 		position: relative;
-		height: 65px;
-		background-color: #fff;
+		height: 85px;
+		// @media (max-width: $max-width) {
+		// 	height: 80px;
+		// }
 		.panel-content {
-			position: relative;
-			width: calc(100% - 60px);
-			padding: 10px 30px;
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: calc(calc(100% - 90px) - 280px);
 			height: 45px;
+			padding: 10px 15px;
+			margin: 15px 30px;
 			background-color: #fff;
-			box-shadow: 0 0 20px 0 rgba(154,161,171,.15);
-			border-bottom: $border;
+			box-shadow: 0 1px 15px 0 rgba(154,161,171,.15);
+			border-radius: 10px;
+			z-index: 500;
+			border: $border;
 			@include grid_2x(350px, 1fr);
 			// @include grid_gap(20px);
 			@media (max-width: $max-width) {
-				position: fixed;
-				top: 0;
 				left: 0;
-				z-index: 500;
-				width: calc(100% - 10px);
+				width: calc(100% - 40px);
 				padding: 10px 5px;
+				margin: 15px 15px; // changed
 				@include grid_2x(150px, 1fr);
 			}
 			.col-1 {
@@ -224,20 +230,26 @@ a {
 	.app-small-profile {
 		position: relative;
 		height: 45px;
-		padding: 0 15px;
+		padding: 0 10px;
 		margin-left: 15px;
-		border-left: $border;
-		border-right: $border;
+		// border-left: $border;
+		// border-right: $border;
+		border-radius: 45px;
 		cursor: pointer;
 		@include grid_2x(30px, 1fr);
 		@include grid_gap(10px);
 		@media (max-width: $max-width) {
 			@include grid_none();
+			padding: 0 7px;
 			border-left: 0;
 			border-right: 0;
 		}
 		&:hover {
-			background-color: #f8f8f8;
+			@include animate_1();
+			background-color: #f5f5f5;
+		}
+		&.active {
+			background-color: #f5f5f5;
 		}
 		.asp-col-1 {
 			position: relative;
@@ -298,6 +310,9 @@ a {
 		overflow: hidden;
 		z-index: 100;
 		box-shadow: $shadow;
+		&.app-menu-popup-hide {
+			display: none;
+		}
 		ul {
 			position: relative;
 			width: 100%;
@@ -311,7 +326,10 @@ a {
 				color: $txt-84-color;
 				cursor: pointer;
 				&:hover {
-					background-color: #f8f8f8;
+					background-color: #f5f5f5;
+				}
+				.icn {
+					width: 25px;
 				}
 			}
 		}
@@ -325,7 +343,7 @@ a {
 		left: 0;
 		width: 100%;
 		height: 100vh;
-		z-index: 100;
+		z-index: 1200;
 		overflow-y: auto;
 		@include transparantScrollBar();
 		.login-content {
@@ -333,7 +351,7 @@ a {
 			width: 700px;
 			padding: 25px;
 			background-color: #fff;
-			border-radius: 5px;
+			border-radius: 10px;
 			overflow: hidden;
 			@media (max-width: $max-width) {
 				@include post_none();

@@ -89,7 +89,9 @@
 
 .display-flex-mobile {
   display: flex;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between; }
   @media (max-width: 800px) {
     .display-flex-mobile {
       display: block; } }
@@ -645,7 +647,7 @@
   position: relative;
   padding: 0 14px;
   height: 45px;
-  border-radius: 5px;
+  border-radius: 7.5px;
   font-size: 11pt;
   text-align: center;
   cursor: pointer;
@@ -727,7 +729,12 @@
     background-color: rgba(0, 0, 0, 0);
     color: rgba(0, 0, 0, 0.54); }
     .btn.btn-grey:hover {
-      background-color: rgba(0, 0, 0, 0);
+      -webkit-transition: all .25s ease;
+      -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+      -o-transition: all .25s ease;
+      transition: all .25s ease;
+      background-color: #f5f5f5;
       color: rgba(0, 0, 0, 0.84); }
   .btn.btn-green {
     background-color: #2ecc71;
@@ -886,7 +893,7 @@
   height: 43px;
   overflow: hidden;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 7.5px;
   display: grid;
   display: -ms-grid;
   grid-template-columns: 1fr 50px;
@@ -1509,7 +1516,19 @@
   .card .card-top {
     position: relative; }
   .card .card-mid {
-    position: relative; }
+    position: relative;
+    width: calc(100% - 30px);
+    height: 170px;
+    padding: 15px; }
+  .card .card-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
 
 .card-percentage {
   position: relative;
@@ -1589,13 +1608,21 @@
 .table {
   position: relative;
   width: calc(100% - 30px);
+  padding: 15px;
   margin: 15px;
-  border-radius: 5px;
+  border-radius: 7.5px;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 0 10px 0 rgba(154, 161, 171, 0.15);
   border-collapse: collapse;
   border-spacing: 0; }
+  .table:hover {
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+    box-shadow: 0 0 30px 0 rgba(154, 161, 171, 0.15); }
   .table thead {
     width: 100%;
     background-color: #394263; }
@@ -1726,8 +1753,8 @@ a {
   width: 100%;
   display: grid;
   display: -ms-grid;
-  grid-template-columns: 300px 1fr;
-  -ms-grid-columns: 300px 1fr; }
+  grid-template-columns: 280px 1fr;
+  -ms-grid-columns: 280px 1fr; }
   @media (max-width: 800px) {
     .app {
       display: block; } }
@@ -1755,7 +1782,7 @@ a {
       position: fixed;
       top: 0;
       left: 0;
-      width: 300px;
+      width: 280px;
       height: 100vh;
       overflow-y: auto; }
   .app .app-main {
@@ -1782,6 +1809,8 @@ a {
     padding: 10px 15px;
     font-size: 9pt;
     color: rgba(255, 255, 255, 0.7); }
+  .app .app-submenu {
+    display: none; }
   .app .app-menu {
     position: relative;
     width: 100%; }
@@ -1848,28 +1877,30 @@ a {
           font-size: 11pt; }
   .app .app-panel {
     position: relative;
-    height: 65px;
-    background-color: #fff; }
+    height: 85px; }
     .app .app-panel .panel-content {
-      position: relative;
-      width: calc(100% - 60px);
-      padding: 10px 30px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: calc(calc(100% - 90px) - 280px);
       height: 45px;
+      padding: 10px 15px;
+      margin: 15px 30px;
       background-color: #fff;
-      box-shadow: 0 0 20px 0 rgba(154, 161, 171, 0.15);
-      border-bottom: 1px #f3f3f3 solid;
+      box-shadow: 0 1px 15px 0 rgba(154, 161, 171, 0.15);
+      border-radius: 10px;
+      z-index: 500;
+      border: 1px #f3f3f3 solid;
       display: grid;
       display: -ms-grid;
       grid-template-columns: 350px 1fr;
       -ms-grid-columns: 350px 1fr; }
       @media (max-width: 800px) {
         .app .app-panel .panel-content {
-          position: fixed;
-          top: 0;
           left: 0;
-          z-index: 500;
-          width: calc(100% - 10px);
+          width: calc(100% - 40px);
           padding: 10px 5px;
+          margin: 15px 15px;
           display: grid;
           display: -ms-grid;
           grid-template-columns: 150px 1fr;
@@ -1892,10 +1923,9 @@ a {
   .app .app-small-profile {
     position: relative;
     height: 45px;
-    padding: 0 15px;
+    padding: 0 10px;
     margin-left: 15px;
-    border-left: 1px #f3f3f3 solid;
-    border-right: 1px #f3f3f3 solid;
+    border-radius: 45px;
     cursor: pointer;
     display: grid;
     display: -ms-grid;
@@ -1906,10 +1936,18 @@ a {
     @media (max-width: 800px) {
       .app .app-small-profile {
         display: block;
+        padding: 0 7px;
         border-left: 0;
         border-right: 0; } }
     .app .app-small-profile:hover {
-      background-color: #f8f8f8; }
+      -webkit-transition: all .25s ease;
+      -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+      -o-transition: all .25s ease;
+      transition: all .25s ease;
+      background-color: #f5f5f5; }
+    .app .app-small-profile.active {
+      background-color: #f5f5f5; }
     .app .app-small-profile .asp-col-1 {
       position: relative;
       grid-column: 1;
@@ -1953,6 +1991,15 @@ a {
     z-index: 1000;
     overflow-y: auto;
     display: none; }
+    .app .app-popup::-moz-scrollbar {
+      width: 10px;
+      height: 10px;
+      background-color: rgba(0, 0, 0, 0); }
+    .app .app-popup::-moz-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.14);
+      -moz-border-radius: 1ex; }
+    .app .app-popup::-moz-scrollbar-corner {
+      background-color: #fff; }
     .app .app-popup::-webkit-scrollbar {
       width: 10px;
       height: 10px;
@@ -1982,6 +2029,8 @@ a {
     overflow: hidden;
     z-index: 100;
     box-shadow: 0 5px 20px rgba(154, 161, 171, 0.15); }
+    .app .app-menu-popup.app-menu-popup-hide {
+      display: none; }
     .app .app-menu-popup ul {
       position: relative;
       width: 100%; }
@@ -1995,15 +2044,26 @@ a {
         color: rgba(0, 0, 0, 0.84);
         cursor: pointer; }
         .app .app-menu-popup ul li:hover {
-          background-color: #f8f8f8; }
+          background-color: #f5f5f5; }
+        .app .app-menu-popup ul li .icn {
+          width: 25px; }
   .app .app-login {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 100;
+    z-index: 1200;
     overflow-y: auto; }
+    .app .app-login::-moz-scrollbar {
+      width: 10px;
+      height: 10px;
+      background-color: rgba(0, 0, 0, 0); }
+    .app .app-login::-moz-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.14);
+      -moz-border-radius: 1ex; }
+    .app .app-login::-moz-scrollbar-corner {
+      background-color: #fff; }
     .app .app-login::-webkit-scrollbar {
       width: 10px;
       height: 10px;
@@ -2025,7 +2085,7 @@ a {
       width: 700px;
       padding: 25px;
       background-color: #fff;
-      border-radius: 5px;
+      border-radius: 10px;
       overflow: hidden; }
       @media (max-width: 800px) {
         .app .app-login .login-content {

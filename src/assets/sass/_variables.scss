@@ -112,6 +112,21 @@ $shadow: 0 5px 20px rgba(154,161,171,.15);
 
 // scrollbar
 @mixin transparantScrollBar() {
+    // normal
+    &::-moz-scrollbar {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    &::-moz-scrollbar-thumb {
+        background-color: rgba(0,0,0,0.14);
+        -moz-border-radius: 1ex;
+    }
+    &::-moz-scrollbar-corner {
+        background-color: #fff;
+    }
+
+    // webkit
     &::-webkit-scrollbar {
         width: 10px;
         height: 10px;

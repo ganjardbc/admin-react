@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, NavLink, HashRouter } from "react-router-dom"
 
 // components
-// import Side from './layouts/Side'
-// import Panel from './layouts/Panel'
+import Login from './auth/Login'
 import Home from './home/Index'
 import Apps from './apps/Index'
 import Pages from './pages/Index'
@@ -19,6 +18,12 @@ class App extends Component {
     super()
     this.state = {
       slideClass: 'app-slide app-slide-mobile',
+      profileClass: 'app-menu-popup app-menu-popup-hide',
+      smallProfileClass: 'app-small-profile',
+      appsSubMenu: 'app-menu app-submenu',
+      pagesSubMenu: 'app-menu app-submenu',
+      appsClass: 'list',
+      pagesClass: 'list',
     }
   }
 
@@ -45,11 +50,63 @@ class App extends Component {
     return dt
   }
 
+  createSubMenu = (val, link) => {
+    let dt = []
+
+    for (let i = 0; i < 3; i++) {
+      dt.push(
+        <NavLink to={ link }>
+          <li className="content">
+            <div class="list">
+              <div class="icn"></div>
+              <div class="ttl">
+                { val }
+              </div>
+              <div class="icn txt-site txt-right txt-12"></div>
+            </div>
+          </li>
+        </NavLink>
+      )
+    }
+
+    return dt
+  }
+
   opSlide = () => {
     if (this.state.slideClass === 'app-slide app-slide-mobile') {
       this.setState({slideClass: 'app-slide'})
     } else {
       this.setState({slideClass: 'app-slide app-slide-mobile'})
+    }
+  }
+
+  opProfile = () => {
+    if (this.state.profileClass === 'app-menu-popup app-menu-popup-hide') {
+      this.setState({profileClass: 'app-menu-popup'})
+      this.setState({smallProfileClass: 'app-small-profile active'})
+    } else {
+      this.setState({profileClass: 'app-menu-popup app-menu-popup-hide'})
+      this.setState({smallProfileClass: 'app-small-profile'})
+    }
+  }
+
+  opAppsSubmenu = () => {
+    if (this.state.appsSubMenu === 'app-menu app-submenu') {
+      this.setState({appsSubMenu: 'app-menu'})
+      this.setState({appsClass: 'list active'})
+    } else {
+      this.setState({appsSubMenu: 'app-menu app-submenu'})
+      this.setState({appsClass: 'list'})
+    }
+  }
+
+  opPagesSubmenu = () => {
+    if (this.state.pagesSubMenu === 'app-menu app-submenu') {
+      this.setState({pagesSubMenu: 'app-menu'})
+      this.setState({pagesClass: 'list active'})
+    } else {
+      this.setState({pagesSubMenu: 'app-menu app-submenu'})
+      this.setState({pagesClass: 'list'})
     }
   }
 
@@ -89,7 +146,7 @@ class App extends Component {
 
                 <ul className="app-menu">
 
-                  <NavLink to="/">
+                  <NavLink to="/home">
                     <li className="content" onClick={ this.opSlide }>
                       <div className="list">
                         <div className="icn">
@@ -102,9 +159,11 @@ class App extends Component {
                     </li>
                   </NavLink>
 
-                  <NavLink to="/apps">
-                    <li className="content" onClick={ this.opSlide }>
-                      <div className="list">
+                  {/* <NavLink to="/apps"> */}
+                    <li className="content">
+                      <div 
+                        className={ this.state.appsClass }
+                        onClick={ this.opAppsSubmenu }>
                         <div className="icn">
                           <i className="fa fa-lg fa-th"></i>
                         </div>
@@ -115,12 +174,19 @@ class App extends Component {
                           <i className="fa fa-lg fa-angle-right"></i>
                         </div>
                       </div>
-                    </li>
-                  </NavLink>
 
-                  <NavLink to="/pages">
-                    <li className="content" onClick={ this.opSlide }>
-                      <div className="list">
+                      <ul className={this.state.appsSubMenu}>
+                        { this.createSubMenu('Apps submenu', '/apps') }
+                      </ul>
+
+                    </li>
+                  {/* </NavLink> */}
+
+                  {/* <NavLink to="/pages"> */}
+                    <li className="content">
+                      <div 
+                        className={ this.state.pagesClass }
+                        onClick={ this.opPagesSubmenu }>
                         <div className="icn">
                           <i className="fa fa-lg fa-file"></i>
                         </div>
@@ -131,8 +197,13 @@ class App extends Component {
                           <i className="fa fa-lg fa-angle-right"></i>
                         </div>
                       </div>
+                      
+                      <ul className={this.state.pagesSubMenu}>
+                        { this.createSubMenu('Pages submenu', '/pages') }
+                      </ul>
+
                     </li>
-                  </NavLink>
+                  {/* </NavLink> */}
 
                 </ul>
 
@@ -162,13 +233,13 @@ class App extends Component {
                 <div className="col-1">
 
                   <button 
-                    className="btn btn-grey app-mobile" 
+                    className="btn btn-grey btn-radius app-mobile" 
                     onClick={ this.opSlide }>
                     <i 
                       className="fa fa-lg fa-bars" 
                       style={{marginRight: '10px'}}></i>
                     <span 
-                      className="txt-site txt-14 txt-main-color txt-bold">
+                      className="txt-site txt-14 txt-main-color txt-thin">
                       Menu
                     </span>
                   </button>
@@ -197,7 +268,10 @@ class App extends Component {
                     <i className="far fa-lg fa-bell"></i>
                   </button>
 
-                  <div className="app-small-profile" style={ {float: 'right'} }>
+                  <div 
+                    onClick={this.opProfile}
+                    className={this.state.smallProfileClass} 
+                    style={ {float: 'right'} }>
                       <div className="asp-col-1">
                         <div className="image image-circle image-30px"></div>
                       </div>
@@ -209,6 +283,27 @@ class App extends Component {
                         </div>
                       </div>
                   </div>
+
+                  <div
+                    style={{top: "45px"}} 
+                    className={this.state.profileClass}>
+                    <ul>
+                      <li onClick={this.opProfile}>
+                        <i className="icn far fa-lw fa-user"></i>
+                        Akun
+                      </li>
+                      <li onClick={this.opProfile} className="bdr-bottom">
+                        <i className="icn fa fa-lw fa-cog"></i>
+                        Pengaturan
+                      </li>
+                      <NavLink to="/">
+                        <li onClick={this.opProfile}>
+                          <i className="icn fa fa-lw fa-power-off"></i>
+                          Logout
+                        </li>
+                      </NavLink>
+                    </ul>
+                  </div>
                 
                 </div>
 
@@ -216,7 +311,8 @@ class App extends Component {
             </div>
 
             {/* content */}
-            <Route exact path="/" component={ Home }></Route>
+            <Route exact path="/" component={ Login }></Route>
+            <Route exact path="/home" component={ Home }></Route>
             <Route exact path="/apps" component={ Apps }></Route>
             <Route exact path="/pages" component={ Pages }></Route>
             <Route exact path="/contents/:id" component={ Contents }></Route>
@@ -232,6 +328,7 @@ class App extends Component {
           
 
         </div>
+
       </HashRouter>
 
     )

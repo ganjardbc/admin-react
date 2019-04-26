@@ -43,6 +43,16 @@
 		     -o-transform: translate(-50%, 0);
 		        transform: translate(-50%, 0);
 }
+@mixin post_middle($path) {
+	position: $path;
+    top: 0;
+    left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	   -moz-transform: translate(-50%, 0);
+		    -ms-transform: translate(-50%, 0);
+		     -o-transform: translate(-50%, 0);
+		        transform: translate(-50%, 0);
+}
 @mixin post_center($path) {
     position: $path;
     top: 50%;
@@ -70,6 +80,8 @@
 .display-flex-mobile {
 	display: flex;
 	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
 	@media (max-width: $max-width) {
 		display: block;
 	}
