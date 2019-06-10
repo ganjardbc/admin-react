@@ -36,6 +36,7 @@ class Login extends Component {
                   <NavLink to="/home">
                     <input 
                       type="submit" 
+                      value="Submit"
                       className="btn btn-width-all background-blue"></input>
                   </NavLink>
                 </div>
